@@ -15,7 +15,7 @@ static int main()
       sb.deleteCharAt("");
       sb.deleteCharAt("\t");
       StringBuilder str =sb.ToString().replaceAll("[^a-zA-Z ｰｦ-ﾟ｢｣･｡､ｰ !\"#$%&()*+,-./:;<=>?[]^{|}~`\_@0-9]", ""); //数値のみ取り出す
-      for(double result =0.0 ; ;!String.IsNullOrEmpty(str.ToString()))
+      for(double result =0.0 ;!String.IsNullOrEmpty(str.ToString());)
       {
               //+ - * / のどれかが見つかれば、そこまでをテキストで返す
               String item = str.stream().findAny().orElse("+").orElse("-").orElse("*").orElse("/"));
